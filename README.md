@@ -6,6 +6,11 @@ A persistent learning and knowledge management system for Claude Code that enabl
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)
 
+### 🚀 Install in seconds:
+```bash
+curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/main/install.sh | bash
+```
+
 ## 🌟 Features
 
 - **Persistent Learning**: Teach Claude once, remember forever
@@ -47,18 +52,25 @@ The learning flow is simple:
 
 ## 🚀 Quick Start
 
-### One-Line Installation
+### Installation
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/main/install.sh | bash
 ```
 
-### Manual Installation
+That's it! The installer will set up everything automatically.
+
+### Alternative: Manual Installation
+
+If you prefer to review the code first:
 
 ```bash
-# Clone the repository
+# Clone and inspect the repository
 git clone https://github.com/amilovidov/claude-learning-system.git
 cd claude-learning-system
+
+# Review the installer script
+cat install.sh
 
 # Run the installer
 ./install.sh

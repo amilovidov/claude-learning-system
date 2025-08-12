@@ -28,13 +28,14 @@ graph TD
     E --> H[Claude Reads On Session Start]
     F --> H
     
-    style A fill:#a5d8ff
-    style B fill:#b2f2bb
-    style C fill:#e599f7
-    style E fill:#ffc9c9
-    style F fill:#ffc9c9
-    style G fill:#ffec99
-    style H fill:#e7f5ff
+    style A fill:#1971c2,color:#fff
+    style B fill:#2f9e44,color:#fff
+    style C fill:#9c36b5,color:#fff
+    style D fill:#f08c00,color:#fff
+    style E fill:#e03131,color:#fff
+    style F fill:#e03131,color:#fff
+    style G fill:#f59f00,color:#fff
+    style H fill:#0c8599,color:#fff
 ```
 
 The learning flow is simple:

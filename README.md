@@ -60,6 +60,22 @@ curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/ma
 
 That's it! The installer will set up everything automatically.
 
+### Update
+
+To update to the latest version:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/main/update.sh | bash
+```
+
+### Uninstall
+
+To remove the system (your learnings will be backed up):
+
+```bash
+curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/main/uninstall.sh | bash
+```
+
 ### Alternative: Manual Installation
 
 If you prefer to review the code first:
@@ -69,7 +85,7 @@ If you prefer to review the code first:
 git clone https://github.com/amilovidov/claude-learning-system.git
 cd claude-learning-system
 
-# Review the installer script
+# Review the scripts
 cat install.sh
 
 # Run the installer

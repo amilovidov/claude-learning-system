@@ -1,0 +1,26 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Test installer
+      run: bash install.sh
+        
+    - name: Verify installation
+      run: |
+        test -f ~/.claude/commands/learn.md
+        test -f ~/.claude/commands/learn_handler.py
+        
+    - name: Test learning
+      run: |
+        python3 ~/.claude/commands/learn_handler.py "Test learning"
+        grep "Test learning" ~/.claude/CLAUDE.md

@@ -4,7 +4,8 @@
 # https://github.com/amilovidov/claude-learning-system
 # Version: 1.0.0
 
-set -e
+set -euo pipefail
+trap 'echo "❌ Installation failed. Please check the error above and try again."' ERR
 
 # Colors for output
 RED='\033[0;31m'

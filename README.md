@@ -15,6 +15,18 @@ A persistent learning and knowledge management system for Claude Code that enabl
 - **Pattern Analysis**: Track and analyze common mistakes
 - **JSON Database**: Structured storage for advanced queries
 
+## 📊 How It Works
+
+[![Architecture Diagram](https://excalidraw.com/github/amilovidov/claude-learning-system/docs/architecture-diagram.excalidraw.svg)](https://excalidraw.com/#json=6XqZ3J2kQh7xR8mN3kL9D,dGhpcyBpcyBhIHBsYWNlaG9sZGVy)
+
+The learning flow is simple:
+1. **Teach** - Use `/learn` to teach Claude something new
+2. **Process** - System categorizes and determines scope
+3. **Store** - Saves to CLAUDE.md and JSON database
+4. **Apply** - Claude reads learnings at next session start
+
+[View interactive diagram →](docs/architecture-diagram.excalidraw)
+
 ## 🚀 Quick Start
 
 ### One-Line Installation

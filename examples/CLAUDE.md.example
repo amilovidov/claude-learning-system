@@ -1,0 +1,84 @@
+# Claude Instructions
+
+This file contains instructions and learnings for Claude to reference across sessions.
+
+## General Guidelines
+
+- Be concise and direct
+- Follow project conventions
+- Ask for clarification when uncertain
+- Apply learnings from previous sessions
+- Never run commands without user confirmation when they modify state
+
+## Learned from Sessions
+
+- [2024-01-15] **Git/GitHub**: gh pr diff does not have --stat flag, use --name-only instead
+- [2024-01-15] **Git/GitHub**: Always use gh api for GitHub operations instead of web fetching
+- [2024-01-15] **Git/GitHub**: gh pr create uses --body not --description for PR body
+- [2024-01-15] **Flutter/Dart**: Timer references must be nullified after cancel() to prevent memory leaks
+- [2024-01-15] **Flutter/Dart**: Always dispose controllers in dispose() method
+- [2024-01-15] **Flutter/Dart**: flutter analyze should be run on specific files, not entire project
+- [2024-01-15] **Bug Fixes**: FIX: Check if provider is disposed before accessing it
+- [2024-01-15] **General**: Custom slash commands are in .claude/commands/ not .claude/slash_commands/
+- [2024-01-15] **DevOps**: Never use fvm (Flutter Version Management), use system Flutter instead
+- [2024-01-15] **Testing**: Always run tests on affected files after making changes
+- [2024-01-15] **Security**: Never commit API keys or secrets to repository
+- [2024-01-15] **Performance**: Profile before optimizing to identify actual bottlenecks
+
+## Project-Specific Rules
+
+### Flutter Projects
+- Use Riverpod for state management
+- Follow Material Design 3 guidelines
+- Maintain widget files under 200 lines
+- Always handle loading and error states
+
+### GitHub Workflow
+- Create feature branches from main
+- Use conventional commit messages
+- Squash commits before merging
+- Always create minimal PRs addressing single issues
+
+### Code Quality
+- Maintain 80% test coverage minimum
+- Fix lint warnings before committing
+- Document public APIs
+- Use meaningful variable names
+
+## Common Mistakes to Avoid
+
+1. **Memory Leaks**: Always dispose of resources (timers, controllers, subscriptions)
+2. **Large PRs**: Keep PRs focused on single issues
+3. **Missing Tests**: Write tests for bug fixes to prevent regression
+4. **Hardcoded Values**: Use constants or configuration files
+5. **Synchronous I/O**: Use async/await for I/O operations
+
+## Useful Patterns
+
+### Error Handling
+```dart
+try {
+  // Operation
+} catch (e) {
+  debugPrint('❌ Error context: $e');
+  // User-friendly error handling
+}
+```
+
+### Resource Cleanup
+```dart
+@override
+void dispose() {
+  _timer?.cancel();
+  _timer = null;
+  _controller.dispose();
+  super.dispose();
+}
+```
+
+### Safe Provider Access
+```dart
+if (mounted && context.mounted) {
+  ref.read(provider);
+}
+```

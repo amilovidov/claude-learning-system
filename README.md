@@ -17,27 +17,24 @@ A persistent learning and knowledge management system for Claude Code that enabl
 
 ## 📊 How It Works
 
-```
-┌─────────────┐      ┌──────────────┐      ┌─────────────┐
-│   User      │      │    Slash     │      │   Python    │
-│   Input     │─────▶│   Command    │─────▶│   Handler   │
-│  /learn     │      │  ~/.claude/  │      │ Categorize  │
-└─────────────┘      └──────────────┘      └──────┬──────┘
-                                                   │
-                                    ┌──────────────┴──────────────┐
-                                    ▼                             ▼
-                            ┌─────────────┐              ┌─────────────┐
-                            │  CLAUDE.md  │              │   JSON DB   │
-                            │   Markdown  │              │ Structured  │
-                            │   Storage   │              │    Data     │
-                            └──────┬──────┘              └─────────────┘
-                                   │
-                                   ▼
-                            ┌─────────────┐
-                            │   Claude    │
-                            │   Reads on  │
-                            │   Startup   │
-                            └─────────────┘
+```mermaid
+graph TD
+    A[👤 User Input<br/>/learn command] -->|Slash Command| B[📝 Command Handler<br/>~/.claude/commands/]
+    B --> C[🐍 Python Processor<br/>learn_handler.py]
+    C -->|Categorize & Process| D{Determine Scope}
+    D -->|Global| E[📄 Global CLAUDE.md<br/>~/.claude/CLAUDE.md]
+    D -->|Project| F[📄 Project CLAUDE.md<br/>./CLAUDE.md]
+    C -->|Store Data| G[📊 JSON Database<br/>learnings.json]
+    E --> H[🤖 Claude Reads<br/>On Session Start]
+    F --> H
+    
+    style A fill:#a5d8ff,stroke:#1971c2,stroke-width:2px
+    style B fill:#b2f2bb,stroke:#2f9e44,stroke-width:2px
+    style C fill:#e599f7,stroke:#9c36b5,stroke-width:2px
+    style E fill:#ffc9c9,stroke:#e03131,stroke-width:2px
+    style F fill:#ffc9c9,stroke:#e03131,stroke-width:2px
+    style G fill:#ffec99,stroke:#f08c00,stroke-width:2px
+    style H fill:#e7f5ff,stroke:#1971c2,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
 The learning flow is simple:
@@ -46,7 +43,6 @@ The learning flow is simple:
 3. **Store** - Saves to CLAUDE.md and JSON database
 4. **Apply** - Claude reads learnings at next session start
 
-[View detailed diagrams →](docs/)
 
 ## 🚀 Quick Start
 
@@ -98,6 +94,23 @@ cd claude-learning-system
 
 ```bash
 /mistakes
+```
+
+## 📂 Learning Categories
+
+The system automatically categorizes your learnings:
+
+```mermaid
+pie title Learning Distribution
+    "Git/GitHub" : 25
+    "Flutter/Dart" : 20
+    "JavaScript/Node" : 15
+    "Python" : 10
+    "DevOps" : 8
+    "Testing" : 7
+    "Database" : 5
+    "Security" : 5
+    "Bug Fixes" : 5
 ```
 
 ## 🛠️ How It Works

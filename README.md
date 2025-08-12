@@ -20,14 +20,14 @@ A persistent learning and knowledge management system for Claude Code that enabl
 ### One-Line Installation
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/your-username/claude-learning-system/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/main/install.sh | bash
 ```
 
 ### Manual Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/claude-learning-system.git
+git clone https://github.com/amilovidov/claude-learning-system.git
 cd claude-learning-system
 
 # Run the installer
@@ -211,8 +211,8 @@ done
 
 ## 💬 Support
 
-- [Open an Issue](https://github.com/your-username/claude-learning-system/issues)
-- [Discussions](https://github.com/your-username/claude-learning-system/discussions)
+- [Open an Issue](https://github.com/amilovidov/claude-learning-system/issues)
+- [Discussions](https://github.com/amilovidov/claude-learning-system/discussions)
 
 ---
 

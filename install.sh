@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Claude Learning System Installer
-# https://github.com/your-username/claude-learning-system
+# https://github.com/amilovidov/claude-learning-system
 # Version: 1.0.0
 
 set -e
@@ -428,6 +428,6 @@ echo -e "${YELLOW}🚀 Quick start:${NC}"
 echo "  Try: /learn gh pr diff does not have --stat flag, use --name-only"
 echo ""
 echo -e "${BLUE}📖 Documentation:${NC}"
-echo "  https://github.com/your-username/claude-learning-system"
+echo "  https://github.com/amilovidov/claude-learning-system"
 echo ""
 echo "Happy learning! 🎉"

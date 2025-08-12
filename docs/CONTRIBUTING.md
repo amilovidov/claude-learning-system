@@ -19,7 +19,7 @@ When you submit code changes, your submissions are understood to be under the sa
 
 ## Report bugs using GitHub Issues
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/your-username/claude-learning-system/issues/new).
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/amilovidov/claude-learning-system/issues/new).
 
 ## Write bug reports with detail, background, and sample code
 

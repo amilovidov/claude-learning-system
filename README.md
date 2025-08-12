@@ -19,22 +19,22 @@ A persistent learning and knowledge management system for Claude Code that enabl
 
 ```mermaid
 graph TD
-    A[👤 User Input<br/>/learn command] -->|Slash Command| B[📝 Command Handler<br/>~/.claude/commands/]
-    B --> C[🐍 Python Processor<br/>learn_handler.py]
+    A[User Input - /learn command] -->|Slash Command| B[Command Handler - ~/.claude/commands/]
+    B --> C[Python Processor - learn_handler.py]
     C -->|Categorize & Process| D{Determine Scope}
-    D -->|Global| E[📄 Global CLAUDE.md<br/>~/.claude/CLAUDE.md]
-    D -->|Project| F[📄 Project CLAUDE.md<br/>./CLAUDE.md]
-    C -->|Store Data| G[📊 JSON Database<br/>learnings.json]
-    E --> H[🤖 Claude Reads<br/>On Session Start]
+    D -->|Global| E[Global CLAUDE.md - ~/.claude/CLAUDE.md]
+    D -->|Project| F[Project CLAUDE.md - ./CLAUDE.md]
+    C -->|Store Data| G[JSON Database - learnings.json]
+    E --> H[Claude Reads On Session Start]
     F --> H
     
-    style A fill:#a5d8ff,stroke:#1971c2,stroke-width:2px
-    style B fill:#b2f2bb,stroke:#2f9e44,stroke-width:2px
-    style C fill:#e599f7,stroke:#9c36b5,stroke-width:2px
-    style E fill:#ffc9c9,stroke:#e03131,stroke-width:2px
-    style F fill:#ffc9c9,stroke:#e03131,stroke-width:2px
-    style G fill:#ffec99,stroke:#f08c00,stroke-width:2px
-    style H fill:#e7f5ff,stroke:#1971c2,stroke-width:2px,stroke-dasharray: 5 5
+    style A fill:#a5d8ff
+    style B fill:#b2f2bb
+    style C fill:#e599f7
+    style E fill:#ffc9c9
+    style F fill:#ffc9c9
+    style G fill:#ffec99
+    style H fill:#e7f5ff
 ```
 
 The learning flow is simple:

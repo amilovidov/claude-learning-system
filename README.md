@@ -1,6 +1,6 @@
 # 🧠 Claude Learning System
 
-A persistent learning and knowledge management system for Claude Code that enables teaching Claude new patterns, fixes, and best practices that persist across conversations.
+A persistent memory system for Claude Code that helps it remember corrections and avoid repeating mistakes across conversations.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -13,11 +13,12 @@ curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/ma
 
 ## 🌟 Features
 
-- **Persistent Learning**: Teach Claude once, remember forever
+- **Persistent Memory**: Teach Claude once, it remembers forever
+- **Mistake Prevention**: Claude learns from corrections to avoid repeating errors
 - **Smart Categorization**: Automatically categorizes learnings (Git/GitHub, Flutter, Python, etc.)
 - **Project & Global Scope**: Maintains both project-specific and global knowledge
-- **Slash Commands**: Natural `/learn` interface within Claude Code
-- **Pattern Analysis**: Track and analyze common mistakes
+- **Slash Commands**: Natural `/learn` interface to correct Claude's mistakes
+- **Pattern Analysis**: Track Claude's common error patterns
 - **JSON Database**: Structured storage for advanced queries
 
 ## 📊 How It Works
@@ -94,7 +95,9 @@ cat install.sh
 
 ## 📚 Usage
 
-### Teaching Claude
+### Correcting Claude's Mistakes
+
+When Claude makes an error, teach it the correct way:
 
 ```bash
 /learn gh pr diff does not have --stat flag, use --name-only instead
@@ -115,11 +118,15 @@ cat install.sh
 
 ### Recording Fixes
 
+When Claude repeats an error, record the fix:
+
 ```bash
 /fix Use flutter analyze before committing code
 ```
 
-### Analyzing Patterns
+### Analyzing Claude's Error Patterns
+
+See what mistakes Claude commonly makes:
 
 ```bash
 /mistakes

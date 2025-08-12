@@ -9,16 +9,16 @@ Quick demonstration of the Claude Learning System in action:
 curl -sSL https://raw.githubusercontent.com/amilovidov/claude-learning-system/main/install.sh | bash
 ```
 
-## 2. Teaching Claude
+## 2. Correcting Claude's Mistakes
 
 ```bash
-# Teach about a GitHub CLI mistake
+# When Claude uses wrong GitHub CLI command
 /learn gh pr diff does not have --stat flag, use --name-only instead
 
-# Teach about Flutter best practices
+# When Claude forgets to dispose resources
 /learn Always dispose timers in dispose() method to prevent memory leaks
 
-# Record a fix
+# Record a fix for a repeated mistake
 /fix Timer references should be nullified after cancel()
 ```
 

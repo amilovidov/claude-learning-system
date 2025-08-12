@@ -1,6 +1,6 @@
-# GitHub/Git Example Learnings
+# GitHub/Git Corrections for Claude
 
-Common learnings for GitHub CLI and Git operations:
+Common mistakes Claude makes with GitHub CLI and Git:
 
 ```bash
 # GitHub CLI commands

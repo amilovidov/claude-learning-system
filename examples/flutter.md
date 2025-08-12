@@ -1,6 +1,6 @@
-# Flutter/Dart Example Learnings
+# Flutter/Dart Corrections for Claude
 
-Common learnings for Flutter and Dart development:
+Common mistakes Claude makes with Flutter and Dart:
 
 ```bash
 # Flutter commands

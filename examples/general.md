@@ -1,6 +1,6 @@
-# General Programming Example Learnings
+# General Programming Corrections for Claude
 
-Common learnings across various programming contexts:
+Common mistakes Claude makes across programming contexts:
 
 ```bash
 # Error handling
